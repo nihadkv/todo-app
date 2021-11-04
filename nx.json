@@ -4,8 +4,7 @@
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "packageManager": "npm"
+    "analytics": "f46ad18b-add7-461e-8d6d-36f8a3a706ee"
   },
   "implicitDependencies": {
     "package.json": {
@@ -18,7 +17,12 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
