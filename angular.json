@@ -1,7 +1,4 @@
 {
-  "cli": {
-    "analytics": "f46ad18b-add7-461e-8d6d-36f8a3a706ee"
-  },
   "version": 1,
   "projects": {
     "api": {
@@ -11,12 +8,16 @@
       "architect": {
         "build": {
           "builder": "@nrwl/node:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -40,14 +41,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/api/**/*.ts"]
+            "lintFilePatterns": [
+              "apps/api/**/*.ts"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/api"],
+          "outputs": [
+            "coverage/apps/api"
+          ],
           "options": {
             "jestConfig": "apps/api/jest.config.js",
             "passWithNoTests": true
@@ -63,9 +70,13 @@
       "architect": {
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["libs/api-interfaces/**/*.ts"]
+            "lintFilePatterns": [
+              "libs/api-interfaces/**/*.ts"
+            ]
           }
         }
       },
@@ -79,7 +90,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/todo",
             "index": "apps/todo/src/index.html",
@@ -87,8 +100,14 @@
             "polyfills": "apps/todo/src/polyfills.ts",
             "tsConfig": "apps/todo/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["apps/todo/src/favicon.ico", "apps/todo/src/assets"],
-            "styles": ["apps/todo/src/styles.scss"],
+            "assets": [
+              "apps/todo/src/favicon.ico",
+              "apps/todo/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/todo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -156,7 +175,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/todo"],
+          "outputs": [
+            "coverage/apps/todo"
+          ],
           "options": {
             "jestConfig": "apps/todo/jest.config.js",
             "passWithNoTests": true
@@ -185,14 +206,20 @@
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
+          "outputs": [
+            "{options.outputFile}"
+          ],
           "options": {
-            "lintFilePatterns": ["apps/todo-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/todo-e2e/**/*.{js,ts}"
+            ]
           }
         }
       },
       "tags": [],
-      "implicitDependencies": ["todo"]
+      "implicitDependencies": [
+        "todo"
+      ]
     }
   }
 }
